@@ -3,12 +3,13 @@ rc #ed2024
 bc #dddddd
 gc #666666
 icon : @import url('https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css');
+icon = ti ti-
 에어컨 air-conditioning
 팬 propeller
 ----
 header
 top
-left)
+left)  
 태극기 KOR 
 brand-youtube
 brand-instagram
@@ -41,6 +42,7 @@ bar
 가전을 넘어
 당신의 일상을 디자인하다!
 View More
+<br />
 3)
 NEW 신일 에어서큘레이터
 bar
