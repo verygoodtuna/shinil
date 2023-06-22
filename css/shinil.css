@@ -5,12 +5,29 @@
     --gc: #666666;
     --wgc: #676767;
     --wc: #ffffff;
+    --dc: #222222;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background: var(--wc);
+    z-index: 999;
 }
 
 .header .top {
     padding: 10px 0;
     border-top: 3px solid var(--mc);
     border-bottom: 1px solid var(--bc);
+
+    transition: 0.5s;
+}
+
+.header.on .top {
+    display: none;
 }
 
 .header .top .inner{
@@ -112,48 +129,308 @@
     border-bottom: 1px solid var(--bc);
 }
 
+.header.on .bottom{
+border-top: 3px solid var(--mc);
+}
+
 .header .bottom .inner {
     display: flex;
     align-items: center;
 }
 
 .header .bottom .gnb {
-    /* margin: 0 0 0 auto; */
+    margin: 0 0 0 auto;
 }
 
 .header .bottom .gnb ul{
     display: flex;
+    justify-content: space-around;
+    /* gap: 30px; */
 }
 
 .header .bottom .gnb ul>li {
-    float: left;
-    width: 25%;
+    width: calc(25vh - 100px);
+}
+
+.header .bottom .gnb ul>li a {
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .header .bottom .btn {
     display: flex;
+    margin: 0 0 0 20px;
+    background: var(--rc);
+    color: var(--wc);
+    border-radius: 50px;
+}
+
+.header .bottom .btn span{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 20px;
+}
+
+.header .bottom .btn i {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 0 0 5px;
+}
+
+.header .bottom .menu i {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--dc);
+    margin: 0 0 0 20px;
 }
 
 .main_home{
-    height: 100vh;
+    padding: 150px 0 0 0;
+}
+
+.main_home .h_slide .itm{
+    position: relative;
 }
 
 .main_home .h_slide .itm01 {
     background: url(../imges/mh01.jfif)no-repeat center center/cover;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 147px);
 }
 
 .main_home .h_slide .itm02 {
     background: url(../imges/mh02.jfif)no-repeat center center/cover;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 147px);
 }
 
 .main_home .h_slide .itm03 {
     background: url(../imges/mh03.jfif)no-repeat center center/cover;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 147px);
 }
 
 .main_home .h_slide .itm04 {
     background: url(../imges/mh04.jfif)no-repeat center center/cover;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 147px);
+}
+
+.main_home .h_slide .txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1230px;
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main_home .h_slide .txt h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--dc);
+    margin: 0 0 50px 0;
+    position: relative;
+}
+
+.main_home .h_slide .txt h2::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+
+    width: 100px;
+    height: 1px;
+    background: var(--gc);
+}
+
+.main_home .h_slide .txt p {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0 0 50px 0;
+}
+
+.main_home .h_slide .txt p strong {
+    font-weight: 700;
+}
+
+.main_home .h_slide .txt p i {
+    color: var(--rc);
+    font-style: inherit;
+}
+
+.main_home .h_slide .txt span a{
+    font-size: 16px;
+    font-weight: 300;
+    padding: 10px 30px;
+    background: var(--rc);
+    color: var(--wc);
+    border-radius: 50px;
+}
+
+.main_home .h_slide .itm01 .txt h2,
+.main_home .h_slide .itm01 .txt h2::after,
+.main_home .h_slide .itm01 .txt p {
+    color: rgba(255, 255, 255, 0.0);
+    background: transparent;
+}
+
+.main_home .h_slide .slick-dots {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    max-width: 1230px;
+    width: 1230px;
+    margin: 0 auto;
+
+    float: left;
+}
+
+.main_home .h_slide .slick-dots>li {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.main_home .h_slide .slick-dots>li button {
+    width: 15px;
+    height: 15px;
+    background: var(--bc);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 10px;
+
+    border: none;
+    outline: none;
+    font-size: 0;
+}
+
+.main_home .h_slide .slick-dots>li.slick-active button {
+    width: 15px;
+    height: 15px;
+    background: var(--rc);
+}
+
+.main_home .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 1400px;
+    width: 100%;
+}
+
+.main_home .arrows i {
+    color: var(--gc);
+    font-size: 50px;
+}
+
+.main_home .arrows .left {
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+.main_home .arrows .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.main_home .scrol {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--wgc);
+
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.main_home .scrol .mouse {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0 0 5px 0;
+}
+
+.main_home .scrol span {
+    font-weight: 300;
+    /* margin: 0 0 5px 0; */
+}
+
+.main_home .scrol .down {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.sec .tit {
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.sec .tit .step {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    background: var(--rc);
+    color: var(--wc);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 0 0 20px 0;
+}
+
+.sec .tit h2 {
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--dc);
+    margin: 0 0 10px 0;
+}
+
+.sec .tit h2 strong {
+    font-weight: 500;
+}
+
+.sec .tit p {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--dc);
+}
+
+.main_product .p_search {
+    border: 1px solid var(--gc);
+    padding: 20px;
+    background: var(--bc);
+    margin: 0 0 100px 0;
+}
+
+.main_product .p_search .con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 20px;
+    border: 1px solid var(--gc);
+    background: var(--wc);
+}
+
+.main_product .p_slide {
+    padding: 0 30px;
+}
+
+.main_product .p_slide .itm {
+    margin: 0 0 30px 0;
+    width: 100%;
+}
+
+.main_product .p_slide .itm i{
+    display: inline-block;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 300;
+    color: var(--wgc);
+    padding: 75px;
+    border: 1px solid var(--bc);
+    border-radius: 50%;
 }
