@@ -8,6 +8,7 @@ $(function () {
         }
     })
 
+
     $('.h_slide').slick({
         arrows: false,
         dots: true,
@@ -25,7 +26,15 @@ $(function () {
         arrows: false,
         dots: true,
         slidesToShow: 4,
-        slidesToScroll: 2,
+        slidesToScroll: 4,
+    })
+
+    $('.main_product .left').on('click', function() {
+        $('.p_slide').slick('slickPrev')
+    })
+
+    $('.main_product .right').on('click', function() {
+        $('.p_slide').slick('slickNext')
     })
 
 })
