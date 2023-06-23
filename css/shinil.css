@@ -371,10 +371,11 @@ border-top: 3px solid var(--mc);
 .main_home .scrol .mouse {
     font-size: 30px;
     font-weight: 300;
-    margin: 0 0 5px 0;
+    margin: 0 0 10px 0;
 }
 
 .main_home .scrol span {
+    font-size: 12px;
     font-weight: 300;
     /* margin: 0 0 5px 0; */
 }
@@ -501,21 +502,29 @@ border-top: 3px solid var(--mc);
     padding: 70px;
     border: 1px solid var(--bc);
     border-radius: 50%;
-    margin: 0 0 20px 0;
+    margin: 0 0 25px 0;
 
+}
+
+.main_product .p_slide .itm:hover i {
+    border: 1px solid var(--rc);
 }
 
 .main_product .p_slide .itm::before {
     content: "";
     position: absolute;
-    bottom: 30px;
+    bottom: 35px;
     left: 50%;
     transform: translate(-50%, 0);
 
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background: var(--sgc);
+}
+
+.main_product .p_slide .itm:hover::before {
+    background: var(--rc);
 }
 
 .main_product .p_slide .itm::after {
@@ -524,7 +533,7 @@ border-top: 3px solid var(--mc);
     font-size: 16px;
     font-weight: 700;
     position: absolute;
-    bottom: 35px;
+    bottom: 42.5px;
     left: 50%;
     transform: translate(-50%, 0);
     color: var(--wc);
@@ -839,7 +848,7 @@ border-top: 3px solid var(--mc);
 }
 
 .main_relation .r_news .n04 .coment {
-    margin: 0 0 50px 0;
+    margin: 0 0 70px 0;
     position: relative;
 }
 
@@ -859,7 +868,7 @@ border-top: 3px solid var(--mc);
     font-size: 15px;
     font-weight: 400;
     color: var(--dc);
-    margin: 0 0 25px 0;
+    margin: 0 0 15px 0;
 }
 
 .main_relation .r_news .n04 .coment>li~li {
@@ -870,6 +879,7 @@ border-top: 3px solid var(--mc);
 .main_relation .r_news .n04 .book {
     display: flex;
     justify-content: center;
+    vertical-align: middle;
     gap: 20px;
 }
 
@@ -918,7 +928,7 @@ border-top: 3px solid var(--mc);
     font-size: 40px;
     font-weight: 500;
     color: var(--wgc);
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
 }
 
 .main_customer .service>li h3 {
@@ -1159,7 +1169,7 @@ border-top: 3px solid var(--mc);
 }
 
 .tab>li:hover::before{
-    color: var(--rc);
+    background: var(--rc);
 }
 
 .tab>li~li::after {
