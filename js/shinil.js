@@ -8,6 +8,32 @@ $(function () {
         }
     })
 
+    $('.tab .home').on('click', function(){
+        var targetTop = $('.main_home').offset().top;
+        
+        $('html, body').stop().animate({scrollTop : targetTop}, 1000)
+    });
+    $('.tab .product').on('click', function(){
+        var targetTop = $('.main_product').offset().top;
+        
+        $('html, body').stop().animate({scrollTop : targetTop}, 1000)
+    });
+    $('.tab .promotion').on('click', function(){
+        var targetTop = $('.main_promotion').offset().top;
+        
+        $('html, body').stop().animate({scrollTop : targetTop}, 1000)
+    });
+    $('.tab .public').on('click', function(){
+        var targetTop = $('.main_relation').offset().top;
+        
+        $('html, body').stop().animate({scrollTop : targetTop}, 1000)
+    });
+    $('.tab .customer').on('click', function(){
+        var targetTop = $('.main_customer').offset().top;
+        
+        $('html, body').stop().animate({scrollTop : targetTop}, 1000)
+    });
+
 
     $('.h_slide').slick({
         arrows: false,

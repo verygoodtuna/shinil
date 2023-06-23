@@ -16,6 +16,7 @@
     <script src="./js/shinil.js"></script>
 </head>
 <body>
+    <div class="wrap">
     <header class="header">
         <section class="top">
             <div class="inner">
@@ -67,7 +68,7 @@
                     </li>
                 </ul>
                 <div class="search">
-                    <input type="text" placeholder="제품명을 검색해주세요">
+                    <input type="text" name="sear" placeholder="제품명을 검색해주세요.">
                     <span>
                         <i class="xi-search"></i>
                     </span>
@@ -405,13 +406,13 @@
                         <ul class="book">
                             <li>
                                 <a href="">
-                                    <i class="ti ti-book-2"></i>
+                                    <i class="ti ti-book-2 book2"></i>
                                     <span>카탈로그</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    <i class="ti ti-book"></i>
+                                    <i class="ti ti-book book2"></i>
                                     <span>제품 설명서</span>
                                 </a>
                             </li>
@@ -484,7 +485,7 @@
                     </ul>
                 </div>
                 <div class="contain">
-                    <div class="tit">
+                    <div class="txt">
                         <h3>
                             CUSTOMER CENTER
                         </h3>
@@ -494,21 +495,15 @@
                     </div>
                     <ul>
                         <li>
-                            Tel. 1577-6667
+                            <strong>Tel. 1577-6667</strong><span>/</span>Fax. 02-2069-0282
                         </li>
                         <li>
-                            /
-                        </li>
-                        <li>
-                            Fax. 02-2069-0282
+                            평일 : 오전 09:00 ~ 오후 06:00 / 토,일요일 · 공휴일 : 휴무 
                         </li>
                     </ul>
                     <span>
-                        평일 : 오전 09:00 ~ 오후 06:00 / 토,일요일 · 공휴일 : 휴무 phone-filled
+                        <i class="bi bi-telephone-fill call"></i>
                     </span>
-                    <strong>
-                        <i class="ti ti-phone"></i>
-                    </strong>
                 </div>
             </div>
         </section>
@@ -539,7 +534,10 @@
                     </li>
                 </ul>
                 <div class="family">
-                    <span>FAMILY SITE</span>
+                    <span>
+                        FAMILY SITE
+                        <i class="xi-caret-down-min"></i>
+                    </span>
                 </div>
             </div>
         </section>
@@ -559,5 +557,23 @@
             </div>
         </section>
     </footer>
+    <ul class="tab">
+        <li class="home">
+            Home
+        </li>
+        <li class="product">
+            Product
+        </li>
+        <li class="promotion">
+            Promotion
+        </li>
+        <li class="public">
+            Public Relation
+        </li>
+        <li class="customer">
+            Customer
+        </li>
+    </ul>
+    </div>
 </body>
 </html>
