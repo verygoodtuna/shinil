@@ -156,24 +156,58 @@ border-top: 3px solid var(--mc);
     align-items: center;
 }
 
-.header .bottom .gnb {
+.header .bottom .Gnb {
     margin: 0 0 0 auto;
 }
 
-.header .bottom .gnb ul{
+.header .bottom .Gnb .gnb{
     display: flex;
     justify-content: space-between;
     gap: 100px;
 }
 
-.header .bottom .gnb ul>li {
+.header .bottom .Gnb .gnb>li {
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 
-.header .bottom .gnb ul>li a {
+.header .bottom .Gnb .gnb>li a {
     font-size: 20px;
     font-weight: 500;
+}
+
+.header .bottom .gnb .lnb {
+    position: absolute;
+    top: 46px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    background: var(--wc);
+    border: 1px solid var(--sgc);
+
+    display: none;
+}
+
+.header .bottom .gnb>li:hover .lnb{
+    display: block;
+}
+
+.header .bottom .Gnb .lnb>li {
+   width: 200px;
+   text-align: center;
+   padding: 10px 20px;
+}
+
+.header .bottom .Gnb .lnb>li~li {
+    border-top: 1px solid var(--sgc);
+}
+
+.header .bottom .Gnb .lnb>li a{
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--dc);
+    line-height: 30px;
 }
 
 .header .bottom .btn {
@@ -1092,9 +1126,6 @@ border-top: 3px solid var(--mc);
     background: var(--sgc);
 }
 
-.footer .company .family {
-   
-}
 
 .footer .company .family span{
     color: var(--wc);
@@ -1109,10 +1140,6 @@ border-top: 3px solid var(--mc);
     font-size: 20px;
     font-weight: 300;
     margin: 0 0 0 10px;
-}
-
-.footer .imformation {
-
 }
 
 .footer .imformation ul {
@@ -1182,4 +1209,8 @@ border-top: 3px solid var(--mc);
     height: 30px;
     background: transparent;
     border: 1px dashed #aaaaaa;
+}
+
+@media (max-width:768px) {
+
 }
