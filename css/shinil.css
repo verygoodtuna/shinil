@@ -8,15 +8,6 @@
     --dc: #222222;
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    background: var(--wc);
-    z-index: 999;
-}
 
 .header .top {
     padding: 10px 0;
