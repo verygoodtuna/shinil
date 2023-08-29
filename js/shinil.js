@@ -1,38 +1,55 @@
 $(function () {
-    $(window).on('scroll', function(){
-        let sct = $(window).scrollTop();
-        if(sct>0) { 
-            $('.header').addClass('on')
-        } else {
-            $('.header').removeClass('on')
+    // $(window).on('scroll', function(){
+    //     let sct = $(window).scrollTop();
+    //     if(sct>0) { 
+    //         $('.header').addClass('on')
+    //     } else {
+    //         $('.header').removeClass('on')
+    //     }
+    // })
+
+    $('.main_con').fullpage ({
+        anchors: ['main_home', 'main_product', 'main_promotion', 'main_relation', 'main_customer'],
+        responsiveWidth: 700,
+        onLeave: function (idx, nidx, dir) {
+            $('.gnb li').eq(nidx - 1).addClass('on').siblings().removeClass('on');
+            console.log(idx, nidx, dir);
+
+            if (dir == 'down') {
+                $('.header').addClass('on')
+            } 
+            else {
+                $('.header').removeClass('on')
+            }
         }
     })
 
-    $('.tab .home').on('click', function(){
-        var targetTop = $('.main_home').offset().top;
+    // $('.tab .home').on('click', function(){
+    //     var targetTop = $('.main_home').offset().top;
         
-        $('html, body').stop().animate({scrollTop : targetTop}, 1000)
-    });
-    $('.tab .product').on('click', function(){
-        var targetTop = $('.main_product').offset().top;
+    //     $('html, body').stop().animate({scrollTop : targetTop}, 1000)
+    // });
+
+    // $('.tab .product').on('click', function(){
+    //     var targetTop = $('.main_product').offset().top;
         
-        $('html, body').stop().animate({scrollTop : targetTop}, 1000)
-    });
-    $('.tab .promotion').on('click', function(){
-        var targetTop = $('.main_promotion').offset().top;
+    //     $('html, body').stop().animate({scrollTop : targetTop}, 1000)
+    // });
+    // $('.tab .promotion').on('click', function(){
+    //     var targetTop = $('.main_promotion').offset().top;
         
-        $('html, body').stop().animate({scrollTop : targetTop}, 1000)
-    });
-    $('.tab .public').on('click', function(){
-        var targetTop = $('.main_relation').offset().top;
+    //     $('html, body').stop().animate({scrollTop : targetTop}, 1000)
+    // });
+    // $('.tab .public').on('click', function(){
+    //     var targetTop = $('.main_relation').offset().top;
         
-        $('html, body').stop().animate({scrollTop : targetTop}, 1000)
-    });
-    $('.tab .customer').on('click', function(){
-        var targetTop = $('.main_customer').offset().top;
+    //     $('html, body').stop().animate({scrollTop : targetTop}, 1000)
+    // });
+    // $('.tab .customer').on('click', function(){
+    //     var targetTop = $('.main_customer').offset().top;
         
-        $('html, body').stop().animate({scrollTop : targetTop}, 1000)
-    });
+    //     $('html, body').stop().animate({scrollTop : targetTop}, 1000)
+    // });
 
 
     $('.h_slide').slick({
